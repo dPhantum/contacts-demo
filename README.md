@@ -16,3 +16,5 @@ Once you have created your machine and have the site defined in your host files 
 Run the composer install to get the vendor pre-requisites all filled and ready to go.
 
 <code> composer install </code>
+
+Copy the .env.exmaple file and rename it to .env and replace the text of "contacts.dev" with your domain name.
