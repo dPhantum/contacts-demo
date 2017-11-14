@@ -27,9 +27,7 @@ run the composer update to get the vendor pre-requisites.
 In the file .env change the items as seen here below, if you don't want to test the SSO functionality for any of the given items, below just remove their references, and be sure not to click on those links, because they will not redirect you correctly.
 </p>  
   
-<code>
-<pre>
-
+<code><pre>
 APP_NAME=ContactsDemo
 APP_ENV=local
 APP_KEY=base64:[YOUR_APP_KEY-AUTOFILLED]
@@ -85,8 +83,7 @@ BITBUCKET_CLIENT_ID=[YOUR CLIENT ID FOR FACEBOOK]
 BITBUCKET_SECRET=[YOUR SECRET FOR BITBUCKET]
 BITBUCKET_REDIRECT=http://[YOUR WEB SITE LOCATION]/login/bitbucket/callback
 
-</pre>
-</code>
+</pre></code>
 
 
 <p>
