@@ -96,3 +96,10 @@ BITBUCKET_REDIRECT=http://[YOUR WEB SITE LOCATION]/login/bitbucket/callback
 <p>
   The rest depends upon where you are installing. Hopefully, that should give you a jump start.
 </p>
+
+<p> Don't forget to create the database and run the database migrations:</p>
+
+<code>php artisan migrate:fresh</code>
+
+<p> enjoy!</p>
+<p>Cheers!<br>~Paul</p>
