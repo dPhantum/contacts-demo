@@ -92,7 +92,7 @@ $emptySet=false;
     </div>
     <div class="col-md-12">
         <div class="center-block text-center">
-            {{ $contacts->render() }}
+            {{ $contacts->links() }}
         </div>
 
     </div>
