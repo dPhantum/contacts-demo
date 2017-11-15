@@ -110,16 +110,16 @@ class ContactsAjaxController extends Controller
      */
     public function update(ContactsRequest $request, $id)
     {
-        $input = $request->all();
+        $formData = $request->all();
+
         ACTrack::send(array(
             "event" => "edit_contact",
-            "data" => "Update of user: ".$input["name"]
+            "data" => "Update of user: ".$formData["name"]
         ));
 
         if(!$request->ajax()){
             return view('auth/login');
         }
-        $formData = $request->all();
         $user = Auth::user();
         $contact = $user->contacts()
             ->whereUserId($user->id)
@@ -136,7 +136,7 @@ class ContactsAjaxController extends Controller
      */
     public function destroy(Request $request, $id)
     {
-        
+
         ACTrack::send(array(
             "event" => "deleted_contact",
             "data" => "Delete of user: ".$id
