@@ -25,16 +25,18 @@ class HomeController extends Controller
      */
     public function index()
     {
-        /*
-        site_logout
-        site_register
-        site_sso_sign_in
-        */
+        $user = Auth::user();
+
+        ACTrack::addContact(array(
+            'name' => $user->name,
+            'email' => $user->email,
+            'phone' => $user->phone
+        ));
+
         ACTrack::send(array(
             'event' => 'load_contact_list',
             'data' => 'listing of contacts'
         ));
-        $user = Auth::user();
 
         $contacts = $user->contacts()
             ->whereUserId($user->id)
