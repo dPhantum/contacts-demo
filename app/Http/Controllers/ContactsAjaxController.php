@@ -136,10 +136,10 @@ class ContactsAjaxController extends Controller
      */
     public function destroy(Request $request, $id)
     {
-        $input = $request->all();
+        
         ACTrack::send(array(
             "event" => "deleted_contact",
-            "data" => "Delete of user: ".$input["name"]
+            "data" => "Delete of user: ".$id
         ));
 
         if(!$request->ajax()){
