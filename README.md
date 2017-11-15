@@ -99,6 +99,8 @@ BITBUCKET_REDIRECT=http://[YOUR WEB SITE LOCATION]/login/bitbucket/callback
 
 <p> Don't forget to create the database and run the database migrations:</p>
 
+<p> Keep in mind if running under in a subdirectory on your machine (not in the root), you will need to change several files (config/app.php, and contacts.js and reassign the workingDir variable), and know what your doing, or the site will be broken.
+
 <code>php artisan migrate:fresh</code>
 
 <p> enjoy!</p>
