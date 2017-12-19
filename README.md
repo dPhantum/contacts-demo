@@ -8,7 +8,6 @@ I am assuming you have all the pre-requisite software installed. If not, you wil
 </p>
 
 <h2>Install Vagrant</h2>
-<hr>
 <p>
 For a backgrond on Vagrant, see:
 </p>
