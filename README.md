@@ -4,7 +4,7 @@
 
 Install Instructions
 <p>
-I am assuming you have all the pre-requisite software installed. If not, you will need Laravel installed () and virtual box to run the Vagrant container.
+I am assuming you have all the pre-requisite software installed. If not, you will need Laravel Homestead installed (https://laravel.com/docs/5.5) and virtual box to run the Vagrant container. Sorry don't have the docker install setup yet for this project.
 </p>
 
 <h2>Install Vagrant</h2>
@@ -14,11 +14,11 @@ For a backgrond on Vagrant, see:
 
 <p>
 http://vagrantup.com/v1/docs/getting-started/index.html
-http://vagrantup.com/v1/docs/provisioners/chef_solo.html
 Download and install VirtualBox from https://www.virtualbox.org/wiki/Downloads Download and install Vagrant from http://downloads.vagrantup.com
 </p>
+
 <p>
-Once you have created your machine and have the site defined in your host files (i.e. /etc/hosts) set up to point to the contacts demo to your local machine or VM. then download the source
+Once you have created your virtual machine and have the site defined in your host files (i.e. /etc/hosts) set up to point to the contacts demo to your local machine or VM. then download the source
 </p>
 
 <code>git clone https://github.com/dPhantum/contacts-demo.git</code>
@@ -29,11 +29,23 @@ run the composer update to get the vendor pre-requisites.
 <code> composer update </code>
 
 
-<p>Copy the .env.exmaple file and rename it to .env and replace the text of "contacts.dev" with your domain name.</p>
+<p>Copy the .env.exmaple file and rename it to .env and replace the text of "contacts.dev" with your domain/location name you've defined in your /etc/hosts file.</p>
 
 <code>cp .env.example .env</code>
 
 <p>
+   The database migrations scripts are included, so that you can do a laravel migrate (as demonstrated at the end of this read me) and build the table schema. You, alternatively, can use the DatabaseSchema.sql located in the <code>/contacts-demo/database/migrations/</code> directory.
+</p>
+
+<p>
+  Don't forget to map your cloned source directory to the containers source directory, by specifying those instructions in the Homestead.yaml file.
+</p>
+
+<h2>SSO Implementation</h2>
+<p>
+  If you want to test the SSO functionality with any of the major providers, you will need to remove the disabled attribute from the <code>/resources/views/auth/login.blade.php</code> file, and also add your credentials in the section of the env file provided. 
+</p>
+<p> 
 In the file .env change the items as seen here below, if you don't want to test the SSO functionality for any of the given items, below just remove their references, and be sure not to click on those links, because they will not redirect you correctly.
 </p>  
   
