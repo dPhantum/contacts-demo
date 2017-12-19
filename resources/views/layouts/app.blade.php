@@ -31,7 +31,7 @@
                     <!-- Branding Image -->
                     <div class="animated fadeInDown">
                         <a class="logo-container animated lightSpeedIn title-page-txt" href="{{ url('/') }}">
-                            <span class="my-name">T. Paul Quidera </span><sup class="tiny-text">Contact Demo</sup>
+                            <span class="my-name">Paul Quidera </span><sup class="tiny-text">Login Demo</sup>
                         </a>
                     </div>
                 </div>
@@ -79,6 +79,8 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    
+    <!--  DEMO OF USING ACTIVE CAMPAIGN SITE -->
     <script type="text/javascript">
         var trackcmp_email = localStorage.email;
         var trackcmp = document.createElement("script");

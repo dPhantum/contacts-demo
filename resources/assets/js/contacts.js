@@ -4,7 +4,7 @@ $(document).ready(function(){
 // Create contact class with crud operational methods
 // --------------------------------------------------------
 window.Contact = {
-
+    _workingDir : '',
     _MaxCustomFields : 5,
     _RemainingFields : 5,
     _id : 0,
@@ -57,7 +57,7 @@ window.Contact = {
 
         $.ajax({
             type: 'POST',
-            url: '/contact',
+            url: _workingDir+'/contact',
             data: formData,
             dataType: 'json',
             success: function (data) {
@@ -187,7 +187,7 @@ window.Contact = {
 
         $.ajax({
             type: 'PATCH',
-            url: '/contact/'+id,
+            url: _workingDir+'/contact/'+id,
             data: formData,
             dataType: 'json',
             success: function (data) {
@@ -231,7 +231,7 @@ window.Contact = {
         $.ajax({
 
             type: "DELETE",
-            url: '/contact/' + id,
+            url: _workingDir+'/contact/' + id,
             success: function (data) {
                 console.log(data);
 
@@ -424,7 +424,7 @@ window.Contact = {
         console.log('looking for: '+text);
         $.ajax({
             type: 'GET',
-            url: '/search/?target='+text,
+            url: _workingDir+'/search/?target='+text,
             // data: {target : text},
             dataType: 'json',
             success: function (data) {

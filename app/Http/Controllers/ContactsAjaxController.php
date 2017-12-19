@@ -8,6 +8,7 @@ use App\Http\Requests\ContactsRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
+
 class ContactsAjaxController extends Controller
 {
     /**
@@ -34,10 +35,10 @@ class ContactsAjaxController extends Controller
         $contacts = $user->contacts()
             ->where('user_id', '=', $user->id)
             ->where(function($query) use ($target) {
-                    $query->where('name', 'LIKE', "%$target%")
+                $query->where('name', 'LIKE', "%$target%")
                     ->orWhere('phone', 'LIKE', "%$target%")
                     ->orWhere('email', 'LIKE', "%$target%");
-        })->paginate(7);
+            })->paginate(7);
 
         return view('contact-list')->with('contacts',$contacts);
     }

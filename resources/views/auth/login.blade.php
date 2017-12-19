@@ -79,27 +79,27 @@
                                        data-toggle="popover" data-placement="top" title="Github Login"
                                        data-content="Use Github to login to and automatically create a new account."></i>
                                 </a>
-                                <a class="btn btn-link" href="{{ url('/login/facebook') }}">
+                                <a class="btn btn-link" href="{{ url('/login/facebook') }}" disabled>
                                     <i class="fa fa-facebook-square fa-3x"
                                        data-toggle="popover" data-placement="bottom" title="Facebook Login"
                                        data-content="Use Facebook to login to and automatically create a new account."></i>
                                 </a>
-                                <a class="btn btn-link" href="{{ url('/login/google') }}">
+                                <a class="btn btn-link" href="{{ url('/login/google') }}" disabled>
                                     <i class="fa fa-google-plus-square fa-3x"
                                        data-toggle="popover" data-placement="top" title="Google Login"
                                        data-content="Use Google+ to login to and automatically create a new account."></i>
                                 </a>
-                                <a class="btn btn-link" href="{{ url('/login/twitter') }}">
+                                <a class="btn btn-link" href="{{ url('/login/twitter') }}" disabled>
                                     <i class="fa fa-twitter-square fa-3x"
                                        data-toggle="popover" data-placement="bottom" title="Twitter Login"
                                        data-content="Use Twitter to login and automatically create a new account."></i>
                                 </a>
-                                <a class="btn btn-link" href="{{ url('/login/linkedin') }}">
+                                <a class="btn btn-link" href="{{ url('/login/linkedin') }}" disabled>
                                     <i class="fa fa-linkedin-square fa-3x"
                                        data-toggle="popover" data-placement="top" title="LinkedIn Login"
                                        data-content="Use LinkedIn to login and automatically create a new account."></i>
                                 </a>
-                                <a class="btn btn-link" href="{{ url('/login/bitbucket') }}">
+                                <a class="btn btn-link" href="{{ url('/login/bitbucket') }}" disabled>
                                     <i class="fa fa-bitbucket-square fa-3x"
                                        data-toggle="popover" data-placement="bottom" title="Bitbucket Login"
                                        data-content="Use Bitbucket to login to and automatically create a new account."></i>

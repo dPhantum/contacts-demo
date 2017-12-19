@@ -12,18 +12,6 @@
 */
 use App\Contact;
 
-//Route::get('/', function () {
-//
-//    if (Auth::check()) {
-//
-//        $contacts = Contact::all();
-//        return view('contacts', compact('contacts'));
-//
-//    }
-//    else {
-//        return view('auth/login');
-//    }
-//});
 
 Auth::routes();
 

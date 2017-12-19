@@ -111,6 +111,7 @@ class LoginController extends Controller
                 $dbUser->save();
                 // then update the user if found
                 Auth::login($dbUser);
+                $_SESSION["Authorized"]=TRUE;
             }
             else if ($dbUser && !$dbUser->active){
                 Session::flash('error','Your account has been locked. Please contact support for assistance.');
@@ -120,6 +121,7 @@ class LoginController extends Controller
                 // if not found then create a guest user
                 $user = User::create($data);
                 Auth::login($user);
+                $_SESSION["Authorized"]=TRUE;
             }
             else {
                 // This should never happen, but safety nets are needed for Murphy's Law
