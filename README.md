@@ -4,10 +4,20 @@
 
 Install Instructions
 <p>
-I am assuming you have all the pre-requisite software installed. If not, then venture over to laravel and install the latest Homestead vagrant machine that is ready for you pre-built. 
+I am assuming you have all the pre-requisite software installed. If not, you will need Laravel installed () and virtual box to run the Vagrant container.
 </p>
 
+<h2>Install Vagrant</h2>
+<hr>
+<p>
+For a backgrond on Vagrant, see:
+</p>
 
+<p>
+http://vagrantup.com/v1/docs/getting-started/index.html
+http://vagrantup.com/v1/docs/provisioners/chef_solo.html
+Download and install VirtualBox from https://www.virtualbox.org/wiki/Downloads Download and install Vagrant from http://downloads.vagrantup.com
+</p>
 <p>
 Once you have created your machine and have the site defined in your host files (i.e. /etc/hosts) set up to point to the contacts demo to your local machine or VM. then download the source
 </p>
